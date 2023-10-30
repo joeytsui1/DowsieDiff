@@ -1,0 +1,11 @@
+@import "./styles/nav.scss";
+
+body {
+    background-color: rgb(26, 36, 116);
+    background: linear-gradient(to right, rgb(52, 6, 60), rgb(23, 31, 106));
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    background-color: adjust-hue($color: #26044f, $degrees: 0);
+    color: white;
+}
