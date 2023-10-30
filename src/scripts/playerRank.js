@@ -5,7 +5,6 @@ class PlayerRank{
     }
 
     summonerRankData(data) {
-        console.log(data)
         let rankPic = document.querySelector("#rank-pic");
         let rank = data.length === 0 ? "Provisional" : data[0].tier.slice(0, 1) + data[0].tier.slice(1).toLowerCase();
         if (data.length === 0) {
