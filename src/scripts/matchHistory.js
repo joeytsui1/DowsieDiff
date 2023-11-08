@@ -82,16 +82,15 @@ class MatchHistory {
                 }
 
                 let currentDate = new Date(match.info.game_datetime)
-                console.log(currentDate)
                 date.innerHTML = currentDate.toLocaleString()
+
                 this.placements.push(match.info.participants[index].placement)
+
                 let units = match.info.participants[index].units
 
                 units.forEach(unit => {
                     let img = document.createElement("img")
-                    let unitName;
-            
-                    unitName = unit.character_id.slice(5)
+                    let unitName = unit.character_id.slice(5);
                     let cost = unit.rarity
 
                     img.src = `/dragontail-13.21.1/13.21.1/img/champion/${unitName}.png`
