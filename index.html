@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="shortcut icon" type="images/png" href="images/favicon-32x32.png">
     <script src="./dist/main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Project Name</title>
+    <title>Dowsie Diff</title>
 </head>
 
 <body>
     <nav>
-        <img id="koi" src="images/3BB1C2D1-5749-48A2-81D6-A338F07C0850.png" alt="">
+        <h1>DOWSIE DIFF</h1>
         <form class="search-bar">
-            <input type="text" id="username-input" placeholder="Search Summoner">
+            <input type="text" id="username-input" placeholder="Search Summoner" autocomplete="off">
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
 
         <div class="Links">
-            <a href="">GitHub</a>
+            <a href="https://github.com/joeytsui1" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/joey-tsui-5836a2240/" target="_blank">LinkedIn</a>
+            <a href="">About Me</a>
         </div>
     </nav>
     <div class="User-Info">
@@ -43,23 +46,26 @@
         <canvas id="win-loss"></canvas>
         <canvas id="top4"></canvas>
     </div>
+    <div class="bottom">
+        <div class="match-history">
+            <div class="table-wrapper">
+                <h1>Last 20 Ranked Games</h1>
+                <div class="row-header">
+                    <h3>Placement</h3>
+                    <h3>Units</h3>
+                </div>
+                <table id="table"></table>
+            </div>
+        </div>
 
-    <div class="match-history">
-
-        <table id="table">
-            <tr class="head">
-                <th id="header"></th>
-                <th id="header1"></th>
-            </tr>
-        </table>
-        <div id="units-played-chart">
-            <canvas id="units-played"></canvas>
-            <!-- <div id="youtube-vid">
-                <iframe width="700" height="500" src="https://www.youtube.com/embed/epd8OwG8i6k"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div> -->
+    <div id="units-played-chart">
+        <canvas class="units-played"></canvas>
+            <div class="youtube-vid">
+                <iframe width="700" height="500" src="https://www.youtube.com/embed/epd8OwG8i6k" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </body>

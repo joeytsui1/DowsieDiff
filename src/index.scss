@@ -2,6 +2,7 @@
 @import "./styles/userinfo.scss";
 @import "./styles/costs.scss";
 @import "./styles/table.scss";
+@import "./styles/unitsPlayed.scss";
 
 body {
     background-color: rgb(26, 36, 116);
@@ -11,4 +12,9 @@ body {
     font-size: large;
     background-color: adjust-hue($color: #26044f, $degrees: 0);
     color: white;
+}
+
+canvas {
+    max-width: 375px;
+    max-height: 375px;
 }

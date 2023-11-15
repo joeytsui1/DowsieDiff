@@ -5,9 +5,12 @@ class PlayerInfo{
     }
 
     playerInfo(data){
+        console.log(data)
+        console.log(data.name)
+        console.log(data.summonerLevel)
         let iconId = data.profileIconId
         let image = document.querySelector('#icon-pic')
-        image.src = `https://ddragon.leagueoflegends.com/cdn/13.1.1/img/profileicon/${iconId}.png`
+        image.src = `/dragontail-13.21.1/13.21.1/img/profileicon/${iconId}.png`
 
         const playerLevel = document.querySelector('#player-level')
         username.innerHTML = `${data.name}`

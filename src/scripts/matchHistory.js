@@ -1,3 +1,7 @@
+import Top4Chart from "./top4Chart";
+import UnitStats from "./unitStats";
+import api_key from "./apikey";
+
 class MatchHistory {
     constructor(data, api) {
         this.api = api
@@ -15,39 +19,24 @@ class MatchHistory {
     }
 
     getMatchData() {
-        fetch(`https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/${this.data.puuid}/ids?start=0&count=20&api_key=${this.api}`)
+        fetch(`https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/${this.data.puuid}/ids?start=0&count=20&api_key=${api_key}`)
             .then(response => response.json())
             .then(data => {
                 const matches = data.map(match => {
-                    return fetch(`https://americas.api.riotgames.com/tft/match/v1/matches/${match}?api_key=${this.api}`)
+                    return fetch(`https://americas.api.riotgames.com/tft/match/v1/matches/${match}?api_key=${api_key}`)
                 })
                 return Promise.all(matches)
             })
             .then(matchResponses => Promise.all(matchResponses.map(res => res.json())))
             .then(matches => {
-                console.log(matches)
-                this.resetTable()
-                let table = document.querySelector("#table")
-                var header = table.createTHead()
-                header.id = "header-row"
-                let headerRow = header.insertRow(0);
 
-                let placementHeader = headerRow.insertCell();
-                placementHeader.id = "header1"
-                let Date = headerRow.insertCell();
-                Date.id = "header"
-                let unitsInGameHeader = headerRow.insertCell();
-                unitsInGameHeader.id = "header"
-                placementHeader.innerHTML = "Placement"
-                unitsInGameHeader.innerHTML = "Units in Game"
-                Date.innerHTML = "Date"
+                this.resetTable()
                 matches.forEach(match => {
                     this.displayMatches(match)
                 })
 
-                // new Top4Chart(this.placements)
-                // new UnitStats(this.unitsPlayed)
-                // new Modals()
+                new Top4Chart(this.placements)
+                new UnitStats(this.unitsPlayed)
             })
             .catch(err => err)
     }
@@ -81,8 +70,10 @@ class MatchHistory {
                     placement.innerHTML = `${eachPlacement}th`
                 }
 
-                let currentDate = new Date(match.info.game_datetime)
-                date.innerHTML = currentDate.toLocaleString()
+                    let currentDate = new Date(match.info.game_datetime);
+                    let options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+                    let formattedDate = currentDate.toLocaleString(undefined, options);
+                    date.innerHTML = formattedDate;
 
                 this.placements.push(match.info.participants[index].placement)
 

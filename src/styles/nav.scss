@@ -2,20 +2,14 @@ nav {
     height: 100%;
     max-height: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     padding-top: 20px;
 }
 
-nav>img {
-    max-width: 250px;
-    max-height: 250px;
-    background-color: rgb(26, 36, 116);
-}
-
 .search-bar {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     background: rgb(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
@@ -39,4 +33,10 @@ nav>img {
     color: #cac7ff;
     cursor: pointer;
     padding: 24px 20px;
+}
+
+.Links > a{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
 }

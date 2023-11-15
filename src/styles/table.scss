@@ -7,16 +7,43 @@
 #table {
     display: grid;
     border-radius: 15px;
-    padding: 30px;
-    margin-left: 30px;
-    margin-bottom: 30px;
     background-color: rgb(55, 44, 98);
-    max-height: 400px;
+    max-height: 700px;
     overflow: auto;
 }
 
-#header{
+td{
+    padding-right: 20px;
+}
+
+.table-wrapper{
+    display: grid;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    background-color: rgb(55, 44, 98);
+    max-height: 900px;
+    max-width: fit-content;
+}
+
+.row-header{
+    display: flex;
+}
+
+.row-header > h3{
+    margin-right: 60px;
+}
+
+
+.header{
     text-align: center;
     border-bottom: 2px solid white;
     padding-right: 5px;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-around;
 }
