@@ -81,10 +81,24 @@ class MatchHistory {
                 let units = match.info.participants[index].units
 
                 units.forEach(unit => {
+                    
                     let img = document.createElement("img")
                     let unitName = unit.character_id.slice(5);
+                    console.log(unitName)
+                    if(!["JarvanIV", "KSante", "reksai", "MissFortune", "_Aatrox"].includes(unitName)){
+                        unitName = unitName.charAt(0).toUpperCase() + unitName.slice(1).toLowerCase()
+                    }
+                     if(unitName === "_Aatrox"){
+                        unitName = "Aatrox"
+                    }
+
+                    if(unitName === "reksai"){
+                        unitName = "RekSai"
+                    }
+
+                    // let lowercase = unitName.charAt(0).toUpperCase() + unitName.slice(1).toLowerCase()
                     let cost = unit.rarity
-                    img.src = `https://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${unitName}.png`
+                    img.src = `https://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/${unitName}.png`
                     img.setAttribute('class', `cost${cost}`)
                     unitsInGame.appendChild(img)
                     this.unitsPlayed.push(unitName)
