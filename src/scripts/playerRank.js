@@ -22,7 +22,7 @@ class PlayerRank{
             document.querySelector("#losses").innerHTML = `Losses: ${data[0].losses}`;
             document.querySelector("#lp").innerHTML = `LP: ${data[0].leaguePoints}`;
         }
-        rankPic.src = `/dragontail-13.21.1/13.21.1/img/tft-regalia/TFT_Regalia_${rank}.png`; 
+        rankPic.src = `https://ddragon.leagueoflegends.com/cdn/13.1.1/img/tft-regalia/TFT_Regalia_${rank}.png`; 
     }
 }
 
