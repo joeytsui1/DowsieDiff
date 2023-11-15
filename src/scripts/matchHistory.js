@@ -84,7 +84,7 @@ class MatchHistory {
                     
                     let img = document.createElement("img")
                     let unitName = unit.character_id.slice(5);
-                    console.log(unitName)
+    
                     if(!["JarvanIV", "KSante", "reksai", "MissFortune", "_Aatrox"].includes(unitName)){
                         unitName = unitName.charAt(0).toUpperCase() + unitName.slice(1).toLowerCase()
                     }

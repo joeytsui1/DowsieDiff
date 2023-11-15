@@ -44,6 +44,16 @@ nav {
   margin-right: 10px;
 }
 
+.Links > button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: large;
+}
+
 .User-Info {
   border-radius: 15px;
   margin-top: 30px;
@@ -254,4 +264,49 @@ body {
 canvas {
   max-width: 375px;
   max-height: 375px;
+}
+
+.jw-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 50px;
+  overflow: auto;
+  backdrop-filter: blur(8px);
+}
+
+.jw-modal.open {
+  display: block;
+}
+
+.jw-modal-body {
+  padding: 50px;
+  height: 300px;
+  background: #26044f;
+  max-height: fit-content;
+  border-radius: 30px;
+  max-width: 700px;
+  margin-left: 400px;
+}
+
+.jw-modal-body > h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+body.jw-modal-open {
+  overflow: hidden;
+}
+
+.modal-button {
+  margin-top: 20px;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-size: large;
 }

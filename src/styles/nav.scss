@@ -40,3 +40,13 @@ nav {
     text-decoration: none;
     margin-right: 10px;
 }
+
+.Links > button {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: large;
+}

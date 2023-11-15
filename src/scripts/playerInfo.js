@@ -5,9 +5,6 @@ class PlayerInfo{
     }
 
     playerInfo(data){
-        console.log(data)
-        console.log(data.name)
-        console.log(data.summonerLevel)
         let iconId = data.profileIconId
         let image = document.querySelector('#icon-pic')
         image.src = `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${iconId}.jpg`

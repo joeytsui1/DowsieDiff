@@ -3,7 +3,7 @@ import PlayerRank from "./scripts/playerRank"
 import MatchHistory from "./scripts/matchHistory"
 import api_key from "./scripts/apikey"
 import WinRatio from "./scripts/winRatio"
-
+import Modal from "./scripts/modal"
 
 document.addEventListener('DOMContentLoaded', () => {
     const api = api_key
