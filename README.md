@@ -9,17 +9,19 @@ Dowsie Diff is a application where you can find stats of any registered Riot Gam
 ![image](https://user-images.githubusercontent.com/109801026/213545382-952bac05-8461-443c-a5d6-200911aa41b6.png)
 
 
+
 # Functionality & MVP 
 - Interactive Visual Charts/Graph/Tables 
 - User inputs to fetch data from the Riot Games API
 - Dynamically renders the charts and tables with data that we get back from the fetch call
 
-<img width="1728" alt="Screenshot 2023-01-23 at 8 13 10 AM" src="https://user-images.githubusercontent.com/109801026/214048982-ff08fd86-4884-487a-8625-b8295373b538.png">
+<img width="1728" alt="Screenshot 2023-11-15 at 5 38 55 PM" src="https://github.com/joeytsui1/DowsieDiff/assets/109801026/478283af-2a7c-434c-b258-782e497d42d5">
 
-- Dropped Menu with different costs of units and if clicked in a modal would show up for the unit
+<img width="1704" alt="Screenshot 2023-11-15 at 5 39 16 PM" src="https://github.com/joeytsui1/DowsieDiff/assets/109801026/f49c2b97-b9e3-448b-90ca-b43ff74cceee">
 
 - Once you load this application you will be greeted with this modal:
-  <img width="772" alt="Screenshot 2023-01-23 at 8 12 16 AM" src="https://user-images.githubusercontent.com/109801026/214048831-2308f00a-63e3-4c02-9594-5dd54ddd7158.png">
+
+<img width="1718" alt="Screenshot 2023-11-15 at 5 39 32 PM" src="https://github.com/joeytsui1/DowsieDiff/assets/109801026/024ff529-1703-4569-ace0-af54d85750a0">
 
 
 # Implementation Timeline
