@@ -10,8 +10,7 @@ class PlayerInfo{
         console.log(data.summonerLevel)
         let iconId = data.profileIconId
         let image = document.querySelector('#icon-pic')
-        image.src = `/dragontail-13.21.1/13.21.1/img/profileicon/${iconId}.png`
-
+        image.src = `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${iconId}.jpg`
         const playerLevel = document.querySelector('#player-level')
         username.innerHTML = `${data.name}`
         playerLevel.innerHTML = `Level ${data.summonerLevel}`

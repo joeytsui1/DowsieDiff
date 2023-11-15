@@ -83,7 +83,6 @@ class MatchHistory {
                     let img = document.createElement("img")
                     let unitName = unit.character_id.slice(5);
                     let cost = unit.rarity
-
                     img.src = `/dragontail-13.21.1/13.21.1/img/champion/${unitName}.png`
                     img.setAttribute('class', `cost${cost}`)
                     unitsInGame.appendChild(img)
