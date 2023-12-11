@@ -235,6 +235,11 @@ td {
   justify-content: space-around;
 }
 
+.table-header {
+  text-align: center;
+  text-decoration: underline;
+}
+
 .units-played {
   border-radius: 15px;
   max-width: 800px;

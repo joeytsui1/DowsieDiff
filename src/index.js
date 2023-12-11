@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(`https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/${username}?api_key=${api}`)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 new PlayerInfo(data)
                 new MatchHistory(data)
                 return fetch(`https://na1.api.riotgames.com/tft/league/v1/entries/by-summoner/${data.id}?api_key=${api}`)
