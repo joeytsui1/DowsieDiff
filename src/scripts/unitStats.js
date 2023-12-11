@@ -93,6 +93,7 @@ class UnitStats {
             }
         }); 
     }
+    
 }
 
 export default UnitStats
