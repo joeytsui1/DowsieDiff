@@ -7,6 +7,7 @@ import Modal from "./scripts/modal"
 
 document.addEventListener('DOMContentLoaded', () => {
     const api = api_key
+
         fetch(`https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/mínasrmy?api_key=${api}`)
         .then(response => response.json())
         .then(data => {
@@ -31,8 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             
             const username = usernameInput.value;
-            console.log(username);
-            console.log(api)
 
         fetch(`https://na1.api.riotgames.com/tft/summoner/v1/summoners/by-name/${username}?api_key=${api}`)
             .then(response => response.json())
